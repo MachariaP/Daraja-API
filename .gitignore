@@ -1,1 +1,31 @@
-venv
+# Python/Django general
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Django database and migrations
+db.sqlite3
+*/migrations/*.py  # Optional: exclude migrations if auto-generated
+*/migrations/__pycache__/
+
+# Environment and secrets
+*.env
+.env
+venv/
+env/
+
+# IDE files (if applicable)
+.idea/
+.vscode/
+
+# Logs and temporary files
+*.log
+*.pid
+*.seed
+*.dat
+
+# Static/Media (if collected locally)
+media/
+staticfiles/
