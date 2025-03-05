@@ -1,4 +1,5 @@
-#  Daraja M-Pesa API Integration
+# Daraja M-Pesa API Integration
+
 A robust Django-based API integrating Safaricom's Daraja M-Pesa services for real-time payment processing.
 Overview
 This project provides a custom implementation of Safaricom's Daraja M-Pesa API, focusing on Customer-to-Business (C2B) transactions. Built with Django and Python, it handles authentication, endpoint routing, and real-time payment callbacks efficiently. Whether you're building a payment gateway or experimenting with M-Pesa integrations, this project offers a solid foundation.
@@ -13,7 +14,8 @@ Flexible Design: Modular structure for easy extension (e.g., adding B2C or STK P
 
 Error Handling: Resolves common issues like 404 errors with synced endpoints.
 
-#  Prerequisites
+## Prerequisites
+
 Python 3.8+
 
 Django 4.x
@@ -22,7 +24,8 @@ Requests library (pip install requests)
 
 Safaricom Daraja API credentials (Consumer Key, Consumer Secret)
 
-#  Installation
+## Installation
+
 Clone the Repository  
 bash
 
@@ -35,7 +38,8 @@ bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-#  Install Dependencies  
+## Install Dependencies
+
 bash
 
 pip install -r requirements.txt
@@ -58,7 +62,8 @@ bash
 
 python manage.py runserver
 
-#  Usage
+## Usage
+
 Registering Callback URLs
 Send a POST request to /api/v1/c2b/register/ to register your validation and confirmation URLs with M-Pesa.
 bash
@@ -67,12 +72,13 @@ curl -X POST http://localhost:8000/api/v1/c2b/register/ \
 -H "Content-Type: application/json" \
 -d '{"validation_url": "https://yourdomain.com/validate", "confirmation_url": "https://yourdomain.com/confirm"}'
 
-#  Testing Endpoints
+## Testing Endpoints
+
 C2B Register: GET /api/v1/c2b/register/ (for testing purposes)
 
 Transaction Callback: Configure your server to handle POST requests from M-Pesa at your callback URLs.
 
-#  Project Structure
+## Project Structure
 
 daraja-api-project/
 ├── api/                # API views and logic
@@ -83,11 +89,14 @@ daraja-api-project/
 ├── requirements.txt    # Project dependencies
 └── README.md           # This file
 
-#  Contributing
+## Contributing
+
 Feel free to fork this repo, submit issues, or send pull requests. All contributions are welcome!
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
-#  Acknowledgements
+
+## Acknowledgements
+
 Safaricom Daraja API Documentation
 
 Django and Python communities
